@@ -12,7 +12,7 @@ searchForm.addEventListener('submit', (e) => {
 })
 
 async function fetchAPI() {
-    const exampleReq = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_KEY}&to=20`;
+    const exampleReq = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_KEY}&to=18`;
     const response = await fetch(exampleReq)
     const data = await response.json();
     generateHtml(data.hits)
@@ -26,7 +26,8 @@ function generateHtml(results) {
     results.map(result => {
         generatedHtml +=
             `
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 20rem;
+        border-color:grey">
         <img class="card-img-top" src="${result.recipe.image}" alt="Image not available">
         <div class="card-body">
           <h5 class="card-title">${result.recipe.label}</h5>
