@@ -26,7 +26,7 @@ function generateHtml(results) {
     results.map(result => {
         generatedHtml +=
             `
-        <div class="card" style="width: 20rem;
+        <div class="card" style="width: 18rem;
         border-color:black;">
         <img class="card-img-top" src="${result.recipe.image}" alt="Image not available">
         <div class="card-body">
